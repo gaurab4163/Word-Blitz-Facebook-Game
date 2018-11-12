@@ -4,7 +4,7 @@ using namespace std;
 
 struct Dictionary {
       Dictionary() {
-        ifstream input ("words2.txt");
+        ifstream input ("words3.txt");
         for (string line; getline(input, line); ) {
           words.insert(line);
         }
@@ -23,7 +23,7 @@ void recurse(string array[][4],string currentWord,vector<bool> history,int i,int
     history[(i*4)+j]=true;
     currentWord+=array[i][j];
     if(dictionary.contains(currentWord))
-        {cout<<currentWord<<endl;totalWords++;}
+        {cout<<currentWord<<"\t";totalWords++;}
     if(j!=3){//east
         if(!history[(i*4)+j+1])
             recurse(array,currentWord,history,i,j+1);
