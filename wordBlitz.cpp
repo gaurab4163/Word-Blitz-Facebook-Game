@@ -4,6 +4,7 @@ using namespace std;
 
 struct Dictionary {
       Dictionary() {
+        cout<<"loading...\n\n";
         ifstream input ("words3.txt");
         for (string line; getline(input, line,' '); ) {
           words.insert(line);
