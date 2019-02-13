@@ -5,7 +5,7 @@ using namespace std;
 struct Dictionary {
       Dictionary() {
         ifstream input ("words3.txt");
-        for (string line; getline(input, line); ) {
+        for (string line; getline(input, line,' '); ) {
           words.insert(line);
         }
       }
